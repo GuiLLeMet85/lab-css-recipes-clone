@@ -1,8 +1,7 @@
 
 body {
-    font-family: 'Open Sans';
-    font-size: 18px;
-    
+    font-family: 'Open Sans'; 
+    font-size: 20px;   
 }
 
 h1 {
@@ -17,6 +16,10 @@ h2 {
     font-weight: 600;
 }
 
+a:any-link {
+    text-decoration: none;
+    color: whitesmoke;
+}
 /* ------------------------------------- section 1 -------------------------------------*/
 
 #section1 {
@@ -108,4 +111,46 @@ ol li {
 
 ol li::before {
     content: counter(my-awesome-counter) ") ";
+}
+
+/* ------------------------------------- Responsive -------------------------------------*/
+
+@media only screen and (max-width: 834px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+
+    
+        .instructions img {
+            width: 80%;
+        }
+        .instructions p {
+        font-size: 24px;
+        }
+
+        .ingredients ul, .directions ol {
+            font-size: 20px;
+        }
+}
+
+@media only screen and (max-width: 414px) {  
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .instructions img {
+        width: 100%;
+    }
+
+    .instructions p {
+        font-size: 18px !important;
+        }
+    .ingredients ul, .directions ol {
+        font-size: 16px !important;
+    }
+    ol li {
+        padding-bottom: 1.3vh;
+    }
+
 }
